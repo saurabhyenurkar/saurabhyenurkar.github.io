@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Registration Form</title>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+function validation(){
+	var user = document.getElementById('user').value;
+	var mobileNumber = document.getElementById('mobileNumber').value;
+	var emails = document.getElementById('emails').value;
+	var pass = document.getElementById('pass').value;
+	var confirmpass = document.getElementById('conpass').value;
+	flag = 1;
+
+	if(user == ""){
+		document.getElementById('username').innerHTML ="&#9888; Please fill the name";
+		flag = 0;;
+	}
+	else if(!isNaN(user)){
+		document.getElementById('username').innerHTML ="&#9888; Only alphabates are allowed";
+		flag = 0;;
+	}
+	else{
+		document.getElementById('username').innerHTML ="&#9989; Accepted";
+
+	}
+
+
+	if(mobileNumber == ""){
+		document.getElementById('mobileno').innerHTML ="&#9888; Please fill the mobile Number";
+		flag = 0;;
+	}
+	else if(isNaN(mobileNumber)){
+		document.getElementById('mobileno').innerHTML ="&#9888; Write digits only not characters";
+		flag = 0;;
+	}
+	else if(mobileNumber.length!=13){
+		document.getElementById('mobileno').innerHTML ="&#9888; Mobile Number must be 10 digits only";
+		flag = 0;;
+	}
+	else{
+		document.getElementById('mobileno').innerHTML ="&#9989; Accepted";
+	}
+
+
+	if(emails == ""){
+		document.getElementById('emailids').innerHTML ="&#9888; Please fill the email";
+		flag = 0;;
+	}
+	else if(emails.indexOf('@') <= 0 ){
+		document.getElementById('emailids').innerHTML ="&#9888; @ Invalid Position";
+		flag = 0;;
+	}
+
+	else if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+		document.getElementById('emailids').innerHTML ="&#9888; .(Dot) Invalid Position";
+		flag = 0;;
+	}
+	else{
+		document.getElementById('emailids').innerHTML ="&#9989; Accepted";
+
+	}
+
+
+	if(pass == ""){
+		document.getElementById('passwords').innerHTML ="&#9888; Please fill the password";
+		flag = 0;;
+	}
+	else if((pass.length <= 5) || (pass.length > 20)) {
+		document.getElementById('passwords').innerHTML ="&#9888; Passwords lenght must be between 5 and 20";
+		flag = 0;;	
+	}
+	else{
+		document.getElementById('passwords').innerHTML ="&#9989; Accepted";
+	}
+
+
+
+	if(confirmpass == ""){
+		document.getElementById('confrmpass').innerHTML ="&#9888; Please fill the confirmpassword";
+		flag = 0;;
+	}
+	else if(pass!=confirmpass){
+		document.getElementById('confrmpass').innerHTML ="&#9888; Password does not match";
+		flag = 0;;
+	}
+	else{
+		document.getElementById('confrmpass').innerHTML ="&#9989; Accepted";
+	}
+	if (flag==0) {
+		return false;
+	}
+	}
+</script>
+</head>
+<body>
+<div class="main"><br>
+	<h1 align="center">Registration Form</h1>
+	<br><br>
+	<form action="#" onsubmit="return validation()">
+		<label for="user" class="lbl"> Full Name: </label>
+		<input type="text" name="user" class="inp" id="user" placeholder=" Enter Your Name"><br>
+		<span id="username" class="spn"> </span>
+		<br><br>
+		<br>
+
+		<label class="lbl"> Mobile Number: </label>
+		<input type="text" name="mobile" class="inp" id="mobileNumber" value="+91" placeholder=" Enter Your Number"><br>
+		<span id="mobileno" class="spn"> </span>
+		<br><br>
+		<br>
+
+		<label class="lbl"> Email: </label>
+		<input type="text" name="email" class="inp" id="emails" placeholder=" Enter Your Email"><br>
+		<span id="emailids" class="spn"> </span>
+		<br><br>
+		<br>
+
+		<label class="lbl">New Password: </label>
+		<input type="password" name="pass" class="inp" id="pass" placeholder=" Enter Password"><br>
+		<span id="passwords" class="spn"> </span>
+		<br><br>
+		<br>
+
+		<label class="lbl"> Confirm Password: </label>
+		<input type="password" name="conpass" class="inp" id="conpass" placeholder=" Re-Enter Password"><br>
+		<span id="confrmpass" class="spn"> </span>
+		<br><br>
+		<br>
+
+		<div align="center" class="btn">
+			<input type="submit" name="submit" value="Submit" class="sub">
+			<input type="reset" name="reset" value="Reset" class="res">
+		</div>
+	</form>
+	<br>
+	<br>
+</div>
+<div class="footer">
+<footer align="center">&copy; Saurabh Yenurkar | Department of Electrical Engineering | USN: EE20024 | S.B. Jain, Nagpur</footer>	
+</div>
+</body>
+</html>
