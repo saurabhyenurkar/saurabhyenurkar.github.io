@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TAE-I (EPS-I)</title>
+	<style type="text/css">
+		body{
+			background: #0F2027;
+    		background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    		background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    	}
+		.heading{
+		    position: absolute;
+		    width: 1535px;
+		    height: 50px;
+		    top: 0px;
+		    left: 0px;
+		    background: #870000;
+		    background: -webkit-linear-gradient(to right, #190A05, #870000);
+		    background: linear-gradient(to right, #190A05, #870000);
+		}
+		.hed{
+		  position: absolute;
+		  top: 6px;
+		  color: #a8e063;
+		  font-style: 'Times New Roman';
+		  font-size: 33px;
+		  font-weight: bold;
+		  text-shadow: 0px 0px 2px #000000;
+		  }
+		.giv{
+		  position: absolute;
+		  width: 478px;
+		  height: 670px;
+		  background: transparent;
+		  border: 5px solid #FFF;
+		  top: 50px;
+		  left: 0px;
+		  padding-left: 5px;
+		  padding-right: 5px;
+		}
+		.giv h1{
+		    padding-left: 4px;
+		   	width: 500px;
+		    font-family: sans-serif;
+		    text-align: center;
+		    font-family: 'Ethnocentric Rg';
+		    color: #FFF;
+		    font-size: 18px;
+		    font-weight: bold;
+		    letter-spacing: 30px;
+		    background-color: transparent;
+		}
+		.diag{
+			position: absolute;
+			background-image: url(fig.png);
+			background-repeat: no-repeat;
+			width: 474px;
+			height: 470px;
+		    border: 2px solid #000;
+		    border-radius: 5px;
+		}
+		.ab{
+			position: absolute;
+			left: 9px;
+			top: 145px;
+			background: yellow;
+		    color: #000;
+		    font-family: 'Times New Roman';
+		    font-size: 20px;
+		    line-height: 20px;
+		    width: 35px;
+		}
+		.abl{
+			position: absolute;
+			left: 55px;
+			top: 147px;
+			font-family: 'Times New Roman';
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.bc{
+			position: absolute;
+			left: 9px;
+			top: 295px;
+			background: yellow;
+		    color: #000;
+		    font-family: 'Times New Roman';
+		    font-size: 20px;
+		    line-height: 20px;
+		    width: 35px;
+		}
+		.bcl{
+			position: absolute;
+			left: 55px;
+			top: 298px;
+			font-family: 'Times New Roman';
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.ad{
+			position: absolute;
+			left: 206px;
+			top: 19px;
+			background: yellow;
+		    color: #000;
+		    font-family: 'Times New Roman';
+		    font-size: 20px;
+		    line-height: 20px;
+		    width: 50px;
+		    padding-left: 0px;
+		}
+		.adl{
+			position: absolute;
+			left: 268px;
+			top: 20px;
+			font-family: 'Times New Roman';
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.A{
+			position: absolute;
+			top: 510px;
+			left: 40px;
+		    color: #FFF;
+		   	font-family: 'Bodoni MT Black';
+		    font-size: 20px;
+		}
+		.A input{
+			position: absolute;
+			top: 0px;
+			left: 325px;
+			background: #FFF;
+		    color: #000;
+		    font-family: 'Times New Roman';
+		    font-size: 20px;
+		    line-height: 20px;
+		    width: 50px;
+		}
+		.AL{
+			position: absolute;
+			left: 426px;
+			top: 530px;
+			color: #ff6a00;
+			font-family: 'Times New Roman';
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.B{
+			position: absolute;
+			top: 550px;
+			left: 40px;
+		    color: #FFF;
+		   	font-family: 'Bodoni MT Black';
+		    font-size: 20px;
+		}
+		.B input{
+			position:absolute;
+			top: 0px;
+			left: 325px;
+			background: #FFF;
+		    color: #000;
+		    font-family: 'Times New Roman';
+		    font-size: 20px;
+		    line-height: 20px;
+		    width: 50px;
+		}
+		.BL{
+			position: absolute;
+			left: 426px;
+			top: 573px;
+			color: #ff6a00;
+			font-family: 'Times New Roman';
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.btn {
+		    position: relative;
+		    top: 568px;
+		    left: 185px;
+		    width: 110px;
+		    height: 40px;
+		    border: none;
+		    outline: none;
+		    font-family: 'tahoma';
+		    font-size: 17px;
+		    font-weight: bold;
+		    color: #fff;
+		    background: #111;
+		    cursor: pointer;
+		    z-index: 0;
+		    border-radius: 10px;
+		}
+		.btn:before {
+		    content: '';
+		    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+		    position: absolute;
+		    top: -2px;
+		    left:-2px;
+		    background-size: 400%;
+		    z-index: -1;
+		    filter: blur(5px);
+		    width: calc(100% + 4px);
+		    height: calc(100% + 4px);
+		    animation: glowing 20s linear infinite;
+		    opacity: 0;
+		    transition: opacity .3s ease-in-out;
+		    border-radius: 10px;
+		}
+		.btn:active {
+		    color: #000
+		}
+		.btn:active:after {
+		    background: transparent;
+		}
+		.btn:hover:before {
+		    opacity: 1;
+		}
+		.btn:after {
+		    z-index: -1;
+		    content: '';
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    background: #111;
+		    left: 0;
+		    top: 0;
+		    border-radius: 10px;
+		}
+		@keyframes glowing {
+		    0% { background-position: 0 0; }
+		    50% { background-position: 400% 0; }
+		    100% { background-position: 0 0; }
+		}
+		.ans{
+		    position: absolute;
+		    width: 1032px;
+		    height: 670px;
+		    background: transparent;
+		    border: 5px solid #fff;
+		    top: 50px;
+		    left: 494px;
+		}
+		.ans h2{
+		    position: absolute;
+		    left: 290px;
+		    width: 500px;
+		    font-family: sans-serif;
+		    text-align: center;
+		    font-family: 'Ethnocentric Rg';
+		    color: #FFF;
+		    font-size: 18px;
+		    font-weight: bold;
+		    letter-spacing: 30px;
+		    background-color: transparent;
+		}
+		.ans1{
+		    position: absolute;
+		    width: 550px;
+		    height: 623px;
+		    background: transparent;
+		    top: 30px;
+		    left: -5px;
+		}
+		.ans2{
+		    position: absolute;
+		    width: 586px;
+		    height: 570px;
+		    background: transparent;
+		    border-left: 3px solid silver;
+		    top: 80px;
+		    left: 440px;
+		}
+		.a1{
+		  position: absolute;
+		  left: 30px;
+		  padding-top: 48px;
+		  color: #FFF;
+		  font-family: 'Times New Roman';
+		  font-weight: bold;
+		  font-size: 22px;
+		}
+		.a{
+		  position: absolute;
+		  left: 30px;
+		  color: #FFF;
+		  font-family: 'Times New Roman';
+		  font-weight: bold;
+		  font-size: 22px;
+		}
+		.footer{
+			position: absolute;
+  			bottom: 5px;
+  			left: 32.5%;
+  			text-align: center;
+			background: #000;
+			font-size: 16px;
+			font-family: 'times new roman';
+			padding: 3px 4px 3px;
+  			letter-spacing: 4.4px;
+			color: #FFF;
+		}
+	</style>
+	<script type="text/javascript">
+			function add()
+			{
+				var ab = parseInt(document.getElementById("ab").value);
+  				var bc = parseInt(document.getElementById("bc").value);
+  				var ad = parseInt(document.getElementById("ad").value);
+  				var dsac = parseInt(document.getElementById("A").value);
+  				var dsbc = parseFloat(document.getElementById("B").value);
+  				var RA = (dsac * Math.pow(10,-3))/2;
+  				var rda = (0.7788*RA).toFixed(4);
+  				var RB = (dsbc * Math.pow(10,-3))/2;
+  				var rdb = (0.7788*RB).toFixed(4);
+  				var be = ad;
+  				var de = ab;
+  				var a = Math.sqrt(((de**2) + (ad**2)));
+  				var ae = a.toFixed(4);
+  				var bd = ae;
+  				var ce = bd;
+  				var ac = ab + bc;
+  				var dc = Math.sqrt(((ac**2) + (ad**2)));
+  				var dm = Math.pow((ad*ae*bd*ad*dc*bd),1/6).toFixed(4);
+  				var dsa = Math.pow((rda*ab*ac*ab*rda*bc*ac*bc*rda),1/9).toFixed(4);
+  				var dsb = Math.pow((rdb*de*de*rdb),1/4).toFixed(4);
+  				var la = (2*Math.pow(10,-7)*Math.log(dm/dsa).toFixed(3));
+  				var lb = (2*Math.pow(10,-7)*Math.log(dm/dsb).toFixed(4));
+  				var lt = (la + lb);
+
+  				document.getElementById('a1').innerHTML = "Radius of Side A Conductors Is: "+"<span style=\"color:#00FF00\">" + RA +" m"+ "</span>";
+  				document.getElementById('a2').innerHTML = "r' of Side A Conductors Is: "+"<span style=\"color:#00FF00\">" + rda +" m"+ "</span>";
+  				document.getElementById('a3').innerHTML = "Radius of Side B Conductors Is: "+"<span style=\"color:#00FF00\">" + RB +" m"+ "</span>";
+  				document.getElementById('a4').innerHTML = "r' of Side B Conductors Is: "+"<span style=\"color:#00FF00\">" + rdb +" m"+ "</span>";
+  				document.getElementById('a5').innerHTML = "D<sub>ad</sub> = D<sub>be</sub> = "+"<span style=\"color:#00FF00\">" + ad +" m"+ "</span>";
+  				document.getElementById('a6').innerHTML = "D<sub>ab</sub> = D<sub>bc</sub> = D<sub>de</sub> = "+"<span style=\"color:#00FF00\">" + de +" m"+ "</span>";
+  				document.getElementById('a7').innerHTML = "D<sub>ae</sub> = D<sub>bd</sub> = D<sub>ce</sub> = "+"<span style=\"color:#00FF00\">" + ae +" m"+ "</span>";
+  				document.getElementById('a8').innerHTML = "D<sub>ac</sub> = "+"<span style=\"color:#00FF00\">" + ac +" m"+ "</span>";
+  				document.getElementById('a9').innerHTML = "D<sub>dc</sub> = "+"<span style=\"color:#00FF00\">" + dc +" m"+ "</span>";
+  				document.getElementById('a10').innerHTML = "D<sub>aa</sub> = D<sub>bb</sub> = D<sub>cc</sub> = "+"<span style=\"color:#00FF00\">" + rda +" m"+ "</span>";
+  				document.getElementById('a11').innerHTML = "D<sub>dd</sub> = D<sub>ee</sub> = "+"<span style=\"color:#00FF00\">" + rdb +" m"+ "</span>";
+  				document.getElementById('b1').innerHTML = "Mutual GMD Between Side A & B Is = D<sub>m</sub> : "+"<span style=\"color:#00FF00\">" + dm +" m"+ "</span>";
+  				document.getElementById('b2').innerHTML = "Self GMR of Side A Is: "+"<span style=\"color:#00FF00\">" + dsa +" m"+ "</span>";
+  				document.getElementById('b3').innerHTML = "Self GMR of Side B Is: "+"<span style=\"color:#00FF00\">" + dsb +" m"+ "</span>";
+  				document.getElementById('b4').innerHTML = "Inductance of Side A Conductors Is: "+"<span style=\"color:#00FF00\">" + la +" H/m"+ "</span>";
+  				document.getElementById('b5').innerHTML = "Inductance of Side B Conductors Is: "+"<span style=\"color:#00FF00\">" + lb +" H/m"+ "</span>";
+  				document.getElementById('b6').innerHTML = "Total Inductance of Line, L<sub>T</sub> Is: "+"<span style=\"color:#00FF00\">" + lt +" H/m"+ "</span>";
+    		}
+	</script>
+</head>
+<body>
+	<div class="heading">
+	</div>
+	<marquee class="hed"scrollamount="10">Creative Assignment Under Teachers Assignment Examination(TAE)-I For The Course Electrical Power System-I</marquee>
+	<div class="giv">
+		<h1>GIVE DATA</h1>
+		<div class="diag">
+			<input id="ab" class="ab" type="number"><label class="abl">m</label>
+
+			<input id="bc" class="bc" type="number"><label class="bcl">m</label>
+
+			<input id="ad" class="ad" type="number"><label class="adl">m</label>
+		</div>
+
+		<p class="A">Diameter of Side A Conductor: <input id="A" type="number"></p><label class="AL">mm</label>
+
+		<p class="B">Diameter of Side B Conductor: <input id="B" type="number"></p><label class="BL">mm</label>
+
+		<button class="btn" type="button" onclick="add()">CALCULATE</button>
+	</div>
+	<div class="ans" id="ans">
+		<h2>ANSWER TAB</h2>
+		<div class="ans1">
+			<p><div class="a1" id="a1"></div></p><br>
+  			<p><br><div class="a1" id="a2"></div></p><br>
+  			<p><br><div class="a1" id="a3"></div></p><br>
+  			<p><br><div class="a1" id="a4"></div></p><br>
+  			<p><br><div class="a1" id="a5"></div></p>
+  			<p><br><div class="a1" id="a6"></div></p>
+  			<p><br><div class="a1" id="a7"></div></p>
+  			<p><br><div class="a1" id="a8"></div></p>
+  			<p><br><div class="a1" id="a9"></div></p><br>
+  			<p><br><div class="a1" id="a10"></div></p>
+  			<p><br><div class="a1" id="a11"></div></p>
+		</div>
+		<div class="ans2">
+			<p><div class="a" id="b1"></div><br>
+			<br>
+  			<p><br><div class="a" id="b2"></div><br><br>
+  			<p><br><div class="a" id="b3"></div><br><br>
+  			<p><br><div class="a" id="b4"></div><br><br>
+  			<p><br><div class="a" id="b5"></div><br><br>
+  			<p><br><div class="a" id="b6"></div><br>
+		</div>
+	</div>
+	<div class="footer">
+		<footer align="center"> &copy; <a href="https://www.linkedin.com/in/saurabh-yenurkar-bb109a241/">Saurabh Yenurkar</a> | Department of Electrical Engineering | USN: EE20024 | S.B. Jain, Nagpur</footer> 
+	</div>
+</body>
+</html>

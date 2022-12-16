@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Power Electronics</title>
+	<style type="text/css">
+		body{
+			background: #2b5876;
+			background: -webkit-linear-gradient(to right, #4e4376, #2b5876);
+			background: linear-gradient(to right, #4e4376, #2b5876);
+		}
+		.heading{
+			position: absolute;
+    		width: 1535px;
+    		height: 50px;
+    		top: 0px;
+    		left: 0px;
+    		background: #0f0c29;
+    		background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    		background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    	}
+		.hed{
+			position: absolute;
+  			top: 6px;
+  			color: #a8e063;
+  			font-style: 'Times New Roman';
+  			font-size: 33px;
+  			font-weight: bold;
+  			text-shadow: 0px 0px 2px #000000;
+  		}
+		.giv{
+		  position: absolute;
+		  width: 390px;
+		  height: 520px;
+		  background: transparent;
+		  border: 5px solid #FFF;
+		  border-radius: 20px;
+		  top: 90px;
+		  left: 550px;
+		  padding-left: 5px;
+		  padding-right: 5px;
+		}
+		.giv h1{
+			position: absolute;
+			left: 36px;
+    		width: 500px;
+    		font-family: sans-serif;
+    		font-family: 'Ethnocentric Rg';
+    		color: #FF265D;
+    		font-size: 22px;
+    		letter-spacing: 25px;
+    		background-color: transparent;
+    	}
+    	.l1{
+    		position: absolute;
+    		left: 0px;
+    		top: 50px;
+    	}
+    	.i1{
+    		position: absolute;
+    		left: 0px;
+    		top: 75px;
+    	}
+		.giv label{
+			color: #FFF;
+    		font-family: 'Arial Black';
+    		font-size: 20px;
+    		line-height: 60px;
+    		padding-left: 20px;
+    	}
+    	.inp{
+    		position: absolute;
+	  		left: 210px;
+	  		font-size: 15px;
+	  		font-family: 'times new roman';
+	  		color: #000;
+	  		width: 155px;
+	  	}
+    	.btn1 {
+    		padding: 10px 25px;
+  			font-family: "Roboto", sans-serif;
+  			font-weight: 500;
+  			background: transparent;
+  			outline: none !important;
+  			cursor: pointer;
+  			transition: all 0.3s ease;
+  			position: absolute;
+  			left: 140px;
+  			top: 190px;
+  			display: inline-block;
+  		}
+
+		.btn2 {
+		  border: 2px solid rgb(255, 255, 255);
+		  z-index: 1;
+		  color: white;
+		}
+		
+		.btn2:after {
+		  position: absolute;
+		  content: "";
+		  width: 100%;
+		  height: 0;
+		  top: 0;
+		  left: 0;
+		  z-index: -1;
+		  background: rgb(255, 255, 255);
+		  transition: all 0.3s ease;
+		}
+		
+		.btn2:hover {
+		  color: rgb(0, 0, 0);
+		}
+		
+		.btn2:hover:after {
+		  top: auto;
+		  bottom: 0;
+		  height: 100%;
+		}
+		.giv h2{
+			position: absolute;
+			left: 36px;
+			bottom: 130px;
+    		width: 500px;
+    		font-family: sans-serif;
+    		font-family: 'Ethnocentric Rg';
+    		color: #FF265D;
+    		font-size: 22px;
+    		letter-spacing: 20px;
+    		background-color: transparent;
+    	}
+    	.an{
+    		position: absolute;
+    		bottom: 120px;
+    		width: 400px;
+    	}
+		.a{
+			position: absolute;
+  			left: 15px;
+  			padding-top: 65px;
+  			color: #FFF;
+  			font-family: 'Arial Black';
+  			font-size: 20px;
+  			word-spacing: 0px;
+  		}
+  		.footer{
+  			position: absolute;
+  			bottom: 0px;
+  			left: 0px;
+  			text-align: center;
+  			background: #000;
+  			font-size: 16px;
+  			font-family: 'times new roman';
+  			padding: 4px 256.5px 4px;
+  			letter-spacing: 4.4px;
+  			color: #FFF;
+  		}		
+	</style>
+	<script type="text/javascript">
+		function calc() {
+			var ivo = parseInt(document.getElementById("iv").value);
+  			var ovo = parseInt(document.getElementById("ov").value);
+  			var freq = parseInt(document.getElementById("fr").value);
+  			var time = 1/freq;
+  			var ton = ((ovo * time)/ivo).toFixed(4);
+
+  			document.getElementById('a1').innerHTML = "Time Period Is(T):    "+"<span style=\"color:#00FF00\">" + time +" Sec"+ "</span>";
+  			document.getElementById('a2').innerHTML = "T<sub>ON</sub> Is:    "+"<span style=\"color:#00FF00\">" + ton +" Sec"+ "</span>";
+		}
+	</script>
+</head>
+<div class="heading">
+ </div>
+<body>
+	<marquee class="hed"scrollamount="9">Creative Assignment Under Teachers Assignment Examination(TAE) For The Course Power Electronics</marquee>
+	<div class="giv">
+		<h1>GIVEN TAB</h1>
+		<div class="l1">
+			<label>Input Voltage:</label><br>
+			<label>Output Voltage: </label><br>
+    		<label>Frequency In Hz: </label>
+		</div>
+		<div class="i1">
+			<input align="right" class="inp" id="iv" type="number"  placeholder="Enter Input Voltage">
+			<br><br><br>
+    		<input class="inp" id="ov" type="number" placeholder="Enter Output Voltage">
+    		<br><br><br>
+    		<input class="inp" id="fr" type="number" placeholder="Enter Frequency In Hz">
+    		<br><br><br>
+    		<button class="btn1 btn2" type="button" onclick="calc()">CALCULATE</button>
+		</div>
+		<h2>ANSWER TAB</h2>
+		<div class="an">
+			<p><div class="a" id="a1"></div>
+			<br>
+			<p><br><div class="a" id="a2"></div>
+		</div>
+	</div>
+	<div class="ans">
+		<p><div class="a" id="a1"></div>
+    	<br>
+  		<p><br><div class="a" id="a2"></div>
+	</div>
+<div class="footer">
+  <footer align="center"> &copy; <a href="https://www.linkedin.com/in/saurabh-yenurkar-bb109a241/">Saurabh Yenurkar</a> | Department of Electrical Engineering | USN: EE20024 | S.B. Jain, Nagpur</footer> 
+</div>
+</body>
+</html>
