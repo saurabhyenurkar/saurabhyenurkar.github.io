@@ -262,7 +262,7 @@ function validation(){
 		document.getElementById('emailids').innerHTML ="&#9888; Please fill the email";
 		flag = 0;;
 	}
-	else if(emails.indexOf('@') <= 0 ){
+	else if(emails.indexOf('@') <= 3 ){
 		document.getElementById('emailids').innerHTML ="&#9888; @ Invalid Position";
 		flag = 0;;
 	}
@@ -281,8 +281,8 @@ function validation(){
 		document.getElementById('passwords').innerHTML ="&#9888; Please fill the password";
 		flag = 0;;
 	}
-	else if((pass.length <= 5) || (pass.length > 20)) {
-		document.getElementById('passwords').innerHTML ="&#9888; Passwords lenght must be between 5 and 20";
+	else if((pass.length < 8) || (pass.length > 12)) {
+		document.getElementById('passwords').innerHTML ="&#9888; Passwords lenght must be between 8 and 12";
 		flag = 0;;	
 	}
 	else{
