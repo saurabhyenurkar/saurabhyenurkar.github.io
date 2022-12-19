@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<style type="text/css">
+		body{
+			background: #f4c4f3;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #fc67fa, #f4c4f3);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #fc67fa, #f4c4f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+		.giv{
+			position: absolute;
+			left: 600px;
+			top: 600px
+			width: 0px;
+			height: 431px;
+			border: 5px solid #000;
+			border-radius-bottom: 15px;
+			box-shadow: 0px 0px 15px #000;
+		}
+		.giv h1{
+			text-align: center;
+		}
+		h3{
+			text-align: center;
+			color: red
+		}
+		.alt{
+			position: absolute;
+			left: 600px;
+			bottom: 100px;
+		}
+		.footer{
+		background-color:rgba(0,0,0,0.9);
+		width:100%;
+		box-shadow:0px 0px 25px rgba(0,0,0,1.00);
+		padding:5px 0px;
+		bottom:0;
+		position:fixed;
+		left: 0px;
+		font-family:'d';
+		font-size:15px;
+		color:#FFF;
+		letter-spacing: 5px;
+	}
+	</style>
+	<script type="text/javascript">
+		function verify()
+		{
+			var name = document.getElementById("name");
+			var gender = document.getElementsByName("gender");
+			var username = document.getElementById("username");
+			var pass = document.getElementById("pass");
+			var msg = new Array();
+			var flag = 1;
+			var message = "*****Following Datails are Required*****\n";
+			var message2 = "*****Following Datails are Required***** <br>";
+			if(name.value == "")
+			{
+				msg[0] = "Name is Required";
+				flag = 0;
+			}	else { msg[0] == ""; }
+			
+			if(gender[0].checked == false && gender[1].checked == false)
+			{
+				msg[1] = "Select Gender";
+				flag = 0 ;
+			}	else {msg[1] == ""; }
+
+			if(username.value == "")
+			{
+				msg[2] = "username is Required";
+				flag = 0 ;
+			}	else {msg[2] == "";}
+
+			if(pass.value == "")
+			{
+				msg[3] = " Password is Required";
+				flag = 0 ;
+			}	else {msg[3] == "";}
+
+			if(pass.value.length < 8)
+			{ 
+				msg[4] = " Password must be 8 character long ";
+			    flag = 0 ;
+			 } else { msg[4] = "";}
+
+			 if(flag == 0)
+			 {
+                 //Show Error Messages
+				//alert(msg[0]+'\n'+msg[1]+'\n'+msg[2]='\n'+msg[3]+'\n'+msg[4]+'\n');
+				//	return false;
+				 for(var x=0;x<=4;x++)
+				 {
+				 	if(msg[x] != "")
+				 	{
+				 		message	+= msg[x] + "\n";
+				 		message2 += msg[x] + "<br>";             
+				 	}
+				 }	 
+				 alert(message);
+				 document.getElementById("abc").innerHTML = message2 ;
+				 return false ;
+			 }
+			 else
+			 {
+			 	return true ;
+			 }
+		}
+	</script>
+</head>
+<body>
+<div class="giv">
+	<h1>Registration Form</h1>
+	<form method="post" action="" onsubmit="return verify()">
+		<table border="2" cellspacing="5" cellpadding="10"> 
+			<tr>
+				<td colspan="2" align="center">*All field are mendatary*</td>
+			</tr>
+			<tr>
+			<td>Name :</td>
+			<td><input type="text" name="name" id="name" size="25" placeholder="Enter Name"/></td>
+		    </tr>
+		    <tr>
+		    	<td>Genter:</td>
+		    	<td><input type="radio" name="gender" value="Male"/> Male
+		    		<input type="radio" name="gender" value="Female"/> Female
+		    	</td>
+		    </tr>
+		    <tr>
+		    	<td>Username:</td>
+		    	<td><input type="text" name="username" id="username" size="25" placeholder="Enter Username"/></td>
+		    </tr>
+		    <tr>
+		    	<td>Password:</td>
+		    	<td><input type="password" name="password" size="25" id="pass" placeholder="Enter Password"/>
+		    	</td>
+		    </tr>
+		    <tr>
+		    	<td align="center" colspan="2">
+		    		<input type="submit" value="REGISTER"/>
+		    		<input type="reset" value="CLEAR"/>
+		    	</td>
+		    </tr>
+		</table>
+	</form>
+
+</div>
+<div class="alt"><h3 id="abc"></h3></div>
+<div class="footer">
+<footer align="center"> &copy; Charan Kalambe | Department of Electrical Engineering | USN: EE20031 | S.B. Jain, Nagpur</footer>	
+</div>
+</body>
+</html>

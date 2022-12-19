@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Registration Form</title>
+<title>Applicant Registration</title>
 <style type="text/css">
 	*{
 		margin: 0px;
@@ -18,136 +18,191 @@
 	}
 	.main{
 		position: fixed;
-	    width: 540px;
-	    height: 600px;
+	    width: 450px;
+	    height: 640px;
 	    background: transparent;
-	    border: 3px solid silver;
+	    border: 3px solid #FFF;
 	    box-shadow: 0px 0px 1000px rgba(10, 155, 41, 0.29);
 	    border-radius: 20px;
-	    top: 40px;
-	    left: 32%;
+	    top: 32px;
+	    left: 34%;
 	}
 	.main h1{
 	  font-family: 'sans-serif';
 	  font-weight: bold;
-	  color: silver;
+	  color: #FFF;
+	  padding-left: 5px;
+	  padding-right: 5px;
 	  font-size: 40px;
 	}
 	.lbl{
 	  color: #FFF;
 	  font-size: 25px;
 	  font-family: 'times new roman';
-	  padding-left: 25px;
+	  padding-left: 20px;
 	}
 	.inp{
 	  position: absolute;
-	  left: 260px;
+	  left: 240px;
 	  background: transparent;
 	  font-size: 15px;
 	  font-family: 'times new roman';
 	  color: #FFF;
-	  border: 2px solid silver;
+	  border: 2px solid #FFF;
 	  border-radius: 3px;
-	  width: 250px;
+	  width: 23		0px;
 	  height: 20px;
 	}
 	.spn{
 	  position: absolute;
-	  left: 270px;
+	  left: 238px;
 	  font-family: 'times new roman';
-	  font-size: 15px;
-	  font-style: italic;
-	  color: #12AD2B;
+	  font-size: 13px;
+	  font-style: bold;
+	  color: red;
 	}
 	.btn{
 	  word-spacing: 70px;
 	}
 	.sub {
-	  border: 5em;
-	  cursor: pointer;
-	  outline: none;
-	  font-size: 16px;
-	  -webkit-transform: translate(0);
-	  transform: translate(0);
-	  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
-	  padding: 0.7em 2em;
-	  border-radius: 65px;
-	  -webkit-transition: box-shadow 0.25s;
-	  transition: box-shadow 0.25s;
-	  color: white;
+		position: absolute;
+		left: 65px;
+  		outline: none;
+  		text-decoration: none;
+  		border-radius: 50px;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  		cursor: pointer;
+  		text-transform: uppercase;
+  		height: 45px;
+  		width: 130px;
+  		opacity: 1;
+  		background-color: #ffffff;
+  		border: 1px solid rgba(0, 0, 0, 0.6);
 	}
 
-	.sub .text {
-	  background-clip: text;
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-	  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+	.sub .subspan {
+	  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	  color: #000000;
+	  font-size: 12px;
+	  font-weight: 500;
+	  letter-spacing: 0.7px;
 	}
-	
-	.sub:after {
-	  content: "";
-	  border-radius: 18px;
-	  position: absolute;
-	  margin: 4px;
-	  top: 0;
-	  left: 0;
-	  bottom: 0;
-	  right: 0;
-	  z-index: -1;
-	  background: #0e0e10;
-	}
-	
+
 	.sub:hover {
-	  background: transparent;
-	  box-shadow: 1px 1px 10px rgb(0, 0, 255, 0.8);
+	  animation: subrotate 0.7s ease-in-out both;
 	}
 	
-	.sub:hover .text {
-	  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+	.sub:hover .subspan {
+	  animation: substorm 0.7s ease-in-out both;
+	  animation-delay: 0.06s;
+	}
+	
+	@keyframes subrotate {
+	  0% {
+	    transform: rotate(0deg) translate3d(0, 0, 0);
+	  }
+	  25% {
+	    transform: rotate(3deg) translate3d(0, 0, 0);
+	  }
+	  50% {
+	    transform: rotate(-3deg) translate3d(0, 0, 0);
+	  }
+	  75% {
+	    transform: rotate(1deg) translate3d(0, 0, 0);
+	  }
+	  100% {
+	    transform: rotate(0deg) translate3d(0, 0, 0);
+	  }
+	}
+	
+	@keyframes substorm {
+	  0% {
+	    transform: translate3d(0, 0, 0) translateZ(0);
+	  }
+	  25% {
+	    transform: translate3d(4px, 0, 0) translateZ(0);
+	  }
+	  50% {
+	    transform: translate3d(-3px, 0, 0) translateZ(0);
+	  }
+	  75% {
+	    transform: translate3d(2px, 0, 0) translateZ(0);
+	  }
+	  100% {
+	    transform: translate3d(0, 0, 0) translateZ(0);
+	  }
 	}
 	.res {
-	  border: 5em;
-	  cursor: pointer;
-	  outline: none;
-	  font-size: 16px;
-	  -webkit-transform: translate(0);
-	  transform: translate(0);
-	  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
-	  padding: 0.7em 2em;
-	  border-radius: 65px;
-	  
-	  -webkit-transition: box-shadow 0.25s;
-	  transition: box-shadow 0.25s;
-	  color: white;
+		position: absolute;
+		left: 250px;
+	    outline: none;
+	    text-decoration: none;
+	    border-radius: 50px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    cursor: pointer;
+	    text-transform: uppercase;
+	    height: 45px;
+	    width: 130px;
+	    opacity: 1;
+	    background-color: #ffffff;
+	    border: 1px solid rgba(0, 0, 0, 0.6);
 	}
 
-	.res .text {
-	  background-clip: text;
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-	  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+	.res .resspan {
+	  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	  color: #000000;
+	  font-size: 12px;
+	  font-weight: 500;
+	  letter-spacing: 0.7px;
 	}
 	
-	.res:after {
-	  content: "";
-	  border-radius: 18px;
-	  position: absolute;
-	  margin: 4px;
-	  top: 0;
-	  left: 0;
-	  bottom: 0;
-	  right: 0;
-	  z-index: -1;
-	  background: #0e0e10;
-	}
-
 	.res:hover {
-	  background: transparent;
-	  box-shadow: 1px 1px 10px rgb(0, 0, 255, 0.8);
+	  animation: resrotate 0.7s ease-in-out both;
 	}
 	
-	.res:hover .text {
-	  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+	.res:hover .resspan {
+	  animation: resstorm 0.7s ease-in-out both;
+	  animation-delay: 0.06s;
+	}
+	
+	@keyframes resrotate {
+	  0% {
+	    transform: rotate(0deg) translate3d(0, 0, 0);
+	  }
+	  25% {
+	    transform: rotate(3deg) translate3d(0, 0, 0);
+	  }
+	  50% {
+	    transform: rotate(-3deg) translate3d(0, 0, 0);
+	  }
+	  75% {
+	    transform: rotate(1deg) translate3d(0, 0, 0);
+	  }
+	  100% {
+	    transform: rotate(0deg) translate3d(0, 0, 0);
+	  }
+	}
+	
+	@keyframes resstorm {
+	  0% {
+	    transform: translate3d(0, 0, 0) translateZ(0);
+	  }
+	  25% {
+	    transform: translate3d(4px, 0, 0) translateZ(0);
+	  }
+	  50% {
+	    transform: translate3d(-3px, 0, 0) translateZ(0);
+	  }
+	  75% {
+	    transform: translate3d(2px, 0, 0) translateZ(0);
+	  }
+	  100% {
+	    transform: translate3d(0, 0, 0) translateZ(0);
+	  }
 	}
 	.footer{
 		background-color:rgba(0,0,0,0.9);
@@ -157,7 +212,7 @@
 		bottom:0;
 		position:fixed;
 		left: 0px;
-		font-family:'d';
+		font-family:'times new roman';
 		font-size:15px;
 		color:#FFF;
 		letter-spacing: 5px;
@@ -170,7 +225,7 @@ function validation(){
 	var emails = document.getElementById('emails').value;
 	var pass = document.getElementById('pass').value;
 	var confirmpass = document.getElementById('conpass').value;
-	flag = 1;
+	var flag = 1;
 
 	if(user == ""){
 		document.getElementById('username').innerHTML ="&#9888; Please fill the name";
@@ -255,7 +310,7 @@ function validation(){
 </head>
 <body>
 <div class="main"><br>
-	<h1 align="center">Registration Form</h1>
+	<h1 align="center">New Applicant Registration Form</h1>
 	<br><br>
 	<form action="#" onsubmit="return validation()">
 		<label for="user" class="lbl"> Full Name: </label>
@@ -265,7 +320,7 @@ function validation(){
 		<br>
 
 		<label class="lbl"> Mobile Number: </label>
-		<input type="text" name="mobile" class="inp" id="mobileNumber" value="+91" placeholder=" Enter Your Number"><br>
+		<input type="text" name="mobile" class="inp" id="mobileNumber" value="" placeholder=" Enter Your Number"><br>
 		<span id="mobileno" class="spn"> </span>
 		<br><br>
 		<br>
@@ -289,7 +344,7 @@ function validation(){
 		<br>
 
 		<div align="center" class="btn">
-			<input type="submit" name="submit" value="Submit" class="sub">
+			<input type="submit" name="submit" value="Submit" onclick="validation()" class="sub">
 			<input type="reset" name="reset" value="Reset" class="res">
 		</div>
 	</form>
